@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-05-13T06:56:16Z"
+  name: kubia
+  namespace: big-data
+  resourceVersion: "15321954"
+  selfLink: /api/v1/namespaces/default/services/kubia
+  uid: 798e7a13-9902-4aa8-921a-2bab91c4d8ab
+spec:
+  clusterIP: 10.236.55.26
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: kubia
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
